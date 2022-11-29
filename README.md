@@ -3,8 +3,9 @@
 ## Setup
 
 The first thing is to clone the repository:
-    $ git clone https://github.com/evan-m-jackson/Todo-List-API.git
-    $ cd Todo-List-API
+
+        $ git clone https://github.com/evan-m-jackson/Todo-List-API.git
+        $ cd Todo-List-API
 
 Then create a virtual environment and activate it:
     $ pip install virtualenv
