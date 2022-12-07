@@ -1,7 +1,7 @@
 # from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import TaskSerializer
+from .serializers import TaskSerializer, IDTaskSerializer
 from .models import Task
 
 """
@@ -50,3 +50,9 @@ def taskDelete(request, pk):
     task = Task.objects.get(id = pk)
     task.delete()
     return Response("Task deleted successfully.")
+
+@api_view(['GET'])
+def firstTaskID(request):
+    tasks = Task.objects.all()
+    serializer = IDTaskSerializer(tasks, many = True)
+    return Response(serializer.data)

@@ -23,4 +23,5 @@ urlpatterns = [
     path('todo/<str:pk>', taskUpdate, name="task-update"),
     path('todo', taskCreate, name="task-Create"),
     path('todo-delete/<str:pk>', taskDelete, name="task-delete"),
+    path('todo-ids', firstTaskID, name="task-ids"),
   ]
